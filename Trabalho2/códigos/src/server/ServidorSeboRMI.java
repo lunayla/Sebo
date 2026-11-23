@@ -9,7 +9,7 @@ public class ServidorSeboRMI {
         try {
             String hostAnunciado = System.getenv().getOrDefault("SEBO_SERVER_HOST", "localhost");
             System.setProperty("java.rmi.server.hostname", hostAnunciado);
-            Loja loja = new Loja("Sebo Universitário UFC Quixadá");
+            Loja loja = new Loja("Sistema de Sebo Virtual");
             SeboDispatcherImpl dispatcher = new SeboDispatcherImpl(loja);
 
             Registry registry = LocateRegistry.createRegistry(1099);

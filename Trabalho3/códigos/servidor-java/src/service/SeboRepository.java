@@ -9,7 +9,7 @@ public class SeboRepository {
     private final AtomicInteger seqNotificacao = new AtomicInteger(1);
 
     public SeboRepository() {
-        this.loja = new Loja("Sebo Universitário UFC Quixadá - Web Service");
+        this.loja = new Loja("Sistema de Sebo Virtual");
 
         // Carga inicial de produtos
         loja.adicionarProduto(new Livro(1, "Sistemas Distribuídos - Coulouris", 85.00, "Seminovo", "George Coulouris", "978-8582600535"));
