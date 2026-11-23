@@ -82,6 +82,21 @@ function requisicaoHttp(metodo, caminho, payload = null) {
   });
 }
 
+function mostrarNotificacao(n) {
+  const tipo = n.tipo || "NOTIFICACAO";
+  const mensagem = n.mensagem || "";
+  const autor = n.autor || "Anônimo";
+
+  console.log("\n");
+  console.log("========================================");
+  console.log("           NOVA NOTIFICAÇÃO");
+  console.log("========================================");
+  console.log(`Tipo:     ${tipo}`);
+  console.log(`Mensagem: ${mensagem}`);
+  console.log(`Autor:    ${autor}`);
+  console.log("========================================");
+}
+
 function iniciarMonitorMural() {
   setInterval(async () => {
     if (!ativo) return;
@@ -102,12 +117,9 @@ function iniciarMonitorMural() {
           n.id
         );
 
-        console.log(
-          `\n\n>>> [NOVA NOTIFICACAO - ${n.tipo}] ` +
-          `(${n.autor}): ${n.mensagem}`
-        );
+        mostrarNotificacao(n);
 
-        process.stdout.write("Escolha uma opção: ");
+        process.stdout.write("\nEscolha uma opção: ");
       }
     }
   }, 2000);

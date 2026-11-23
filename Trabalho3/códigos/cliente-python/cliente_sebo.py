@@ -45,6 +45,21 @@ def requisicao_http(metodo: str, caminho: str, payload: dict = None):
         }
 
 
+def mostrar_notificacao(notif):
+    tipo = notif.get("tipo", "NOTIFICACAO")
+    mensagem = notif.get("mensagem", "")
+    autor = notif.get("autor", "Anônimo")
+
+    print("\n")
+    print("========================================")
+    print("           NOVA NOTIFICAÇÃO")
+    print("========================================")
+    print(f"Tipo:     {tipo}")
+    print(f"Mensagem: {mensagem}")
+    print(f"Autor:    {autor}")
+    print("========================================")
+
+
 def thread_escutar_mural():
     global ultimo_id_notificacao
 
@@ -61,12 +76,9 @@ def thread_escutar_mural():
                     notif["id"]
                 )
 
-                print(
-                    f"\n\n>>> [NOVA NOTIFICACAO - {notif['tipo']}] "
-                    f"({notif['autor']}): {notif['mensagem']}"
-                )
+                mostrar_notificacao(notif)
 
-                print("Escolha uma opção: ", end="", flush=True)
+                print("\nEscolha uma opção: ", end="", flush=True)
 
         time.sleep(2)
 
