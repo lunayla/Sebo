@@ -19,7 +19,7 @@ public class ServidorSeboRMI {
             System.out.println(" Servidor RMI do Sebo iniciado na porta 1099!");
             System.out.println("==========================================================");
         } catch (Exception e) {
-            System.err.println("Erro ao iniciar Servidor RMI: " + e.getMessage());
+            System.err.println("Erro ao iniciar Servidor: " + e.getMessage());
             e.printStackTrace();
         }
     }
