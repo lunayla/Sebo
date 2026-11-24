@@ -196,7 +196,7 @@ public class SeboServicoLocal {
 
         String tipo = params.getOrDefault("tipo", "NOTIFICACAO");
         String mensagem = params.getOrDefault("mensagem", "");
-        String autor = params.getOrDefault("autor", "Anônimo");
+        String autor = params.getOrDefault("autor", "Anonimo");
 
         Notificacao notif = new Notificacao(
                 tipo,

@@ -113,7 +113,7 @@ public class ClienteSeboRMI {
 
             if (token.isBlank() || perfil.isBlank()) {
                 System.out.println(
-                        "Não foi possível iniciar a sessao. Tente novamente."
+                        "Nao foi possível iniciar a sessao. Tente novamente."
                 );
                 return;
             }
@@ -311,13 +311,13 @@ public class ClienteSeboRMI {
                     }
 
                     default:
-                        System.out.println("Opção inválida.");
+                        System.out.println("Opçao inválida.");
                 }
             }
 
         } catch (Exception e) {
             System.err.println(
-                    "Erro no cliente RMI: " + e.getMessage()
+                    "Erro no cliente: " + e.getMessage()
             );
             e.printStackTrace();
         }

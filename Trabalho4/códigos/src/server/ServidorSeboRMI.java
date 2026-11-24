@@ -17,8 +17,6 @@ public class ServidorSeboRMI {
 
             System.out.println("==========================================================");
             System.out.println(" Servidor RMI do Sebo iniciado na porta 1099!");
-            System.out.println(" Objeto remoto registrado: 'SeboDispatcher'");
-            System.out.println(" Protocolo Requisicao-Resposta ativo.");
             System.out.println("==========================================================");
         } catch (Exception e) {
             System.err.println("Erro ao iniciar Servidor RMI: " + e.getMessage());

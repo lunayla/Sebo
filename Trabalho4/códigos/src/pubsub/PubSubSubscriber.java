@@ -87,7 +87,7 @@ public class PubSubSubscriber implements Runnable {
                         out.write("ACK|" + id + "\n");
                         out.flush();
 
-                        System.out.print("\nEscolha uma opção: ");
+                        System.out.print("\nEscolha uma opçao: ");
                     }
                 }
 
@@ -118,7 +118,7 @@ public class PubSubSubscriber implements Runnable {
 
         String tipo = dados.getOrDefault("tipo", "NOTIFICACAO");
         String mensagem = dados.getOrDefault("mensagem", payload);
-        String autor = dados.getOrDefault("autor", "Anônimo");
+        String autor = dados.getOrDefault("autor", "Anonimo");
 
         System.out.println("\n");
         System.out.println("========================================");
